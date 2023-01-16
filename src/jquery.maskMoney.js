@@ -110,7 +110,7 @@
                         start = el.selectionStart;
                         end = el.selectionEnd;
                     } else {
-                        range = document.selection.createRange();
+                        range = ((s=document.selection)===void(0)?void(0):s.createRange());
 
                         if (range && range.parentElement() === el) {
                             len = el.value.length;
